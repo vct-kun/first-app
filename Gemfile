@@ -6,8 +6,9 @@ gem 'bootstrap-sass', '2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
-	gem 'sqlite3', '1.3.5'
+group :development, :test do
+  gem 'sqlite3', '1.3.5'
+  gem 'rspec-rails', '2.11.0'
 end
 
 
@@ -24,6 +25,16 @@ group :assets do
 end
 
 gem 'jquery-rails', '2.0.2'
+
+group :test do
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
+  # gem 'launchy', '2.1.0'
+  # gem 'rb-fsevent', '0.9.1', :require => false
+  # gem 'growl', '1.0.3'
+end
 
 group :production do
   gem 'pg', '0.12.2'
