@@ -7,6 +7,7 @@ describe "Static pages" do
     it "should have the h1 'Sample App'" do
       visit root_path
       page.should have_selector('h1', text: 'Sample App')
+      page.should have_selector('title', text: full_title(''))
     end
   end
 
